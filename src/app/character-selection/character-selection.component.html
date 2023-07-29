@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label for="character">Select Character</label>
+    <select class="form-control" id="character" [(ngModel)]="selectedCharacter">
+        <option *ngFor="let character of characters">{{character}}</option>
+    </select>
+</div>

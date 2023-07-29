@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="character.name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" required [(ngModel)]="character.description"
+            name="description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!characterForm.form.valid">Submit</button>
+</form>
